@@ -1,0 +1,39 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > span {
+    color: #ffffff;
+    font-weight: 700;
+    padding: 35px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+nav > ul {
+    display: flex;
+}
+
+nav > ul > li {
+    color: #ffffff;
+    padding: 35px;
+    list-style-type: none;
+    font-family: 'Arial';
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 17px;
+    margin: auto;
+}
+
+.btnLogin{
+    cursor: pointer;
+    border-color: #ffffff;
+    background-color: #1C8FF0;
+    color: #ffffff;
+    font-size: 17px;
+    border-style: solid;
+    width: 100px;
+    border-radius: 20px;
+    height: 35px;
+}
