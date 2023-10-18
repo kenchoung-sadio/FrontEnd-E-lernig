@@ -11,7 +11,7 @@ const Landing = () => {
             <Divider />
             <section className='landing-section'>
                 <section className='landing-description'>
-                    <h1>Find most Exciting <br /> <span>Online Courses</span></h1>
+                    <h1 id="typing-text">Find most Exciting <br /> <span>Online Courses</span></h1>
                     <p>Coming up with a catchy slogan, or crafting the right tagline that defines your brand and really solidifies it in the minds of your customers, is difficult to assign a true value to.</p>
                     <button className='btn_submit_principal'>Start learning</button>
                 </section>
