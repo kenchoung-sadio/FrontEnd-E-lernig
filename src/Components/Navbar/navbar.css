@@ -24,6 +24,25 @@ nav > ul > li {
     cursor: pointer;
     font-size: 17px;
     margin: auto;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+nav > ul > li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Couleur du soulignement */
+    transition: all 0.3s ease;
+}
+
+nav > ul > li:nth-child(-n+3):hover::after{
+    width: 100%;
 }
 
 .btnLogin{

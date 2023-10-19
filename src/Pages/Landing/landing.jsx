@@ -5,7 +5,7 @@ import { Divider } from '@mui/material';
 import Courses from '../../Components/Courses/courses';
 import InformationSection from '../../Components/InformationSection/informationSection';
 
-const Landing = () => {
+const LandingPage = () => {
     return (
         <>
             <Divider />
@@ -27,4 +27,4 @@ const Landing = () => {
     );
 }
 
-export default Landing;
+export default LandingPage;

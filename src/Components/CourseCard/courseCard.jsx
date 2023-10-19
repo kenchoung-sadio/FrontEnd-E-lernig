@@ -1,9 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import card_img from '../../Assets/card_img.png'
 import './courseCard.css'
+import { getCourse } from '../../Services/Courses/getCourse';
+import { Skeleton } from '@mui/material';
+import { API_URL } from '../../Services/API';
 
 const CourseCard = ({ id }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [courseElement, setCourseElement] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  const handlerGetCourse = async () => {
+    try {
+        const data = await getCourse(id)
+        setCourseElement(data.data.attributes)
+        console.log(data.data.attributes)
+        setIsLoading(false)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
   useEffect(() => {
     const btnSeeMore = document.querySelector(`#seeMoreBtn-${id}`);
@@ -13,16 +28,33 @@ const CourseCard = ({ id }) => {
     }
   }, [isHovered, id]);
 
+  useEffect(() => {
+    handlerGetCourse()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <div
       className={`card ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <span className='badge-price'>Free</span>
-      <img src={card_img} alt="img" />
+      <span className='badge-price'>{courseElement.Type}</span>
+      {
+        isLoading ?(
+          <Skeleton variant="rectangular" width={'100%'} height={'auto'} />
+        ) : (
+          <img src={API_URL + courseElement.courseImage.data.attributes.formats.medium.url} alt="img" />
+        )
+      }
       <button id={`seeMoreBtn-${id}`}>See more</button>
-      <h2>Web Development with HTML - CSS -JS</h2>
+      {
+        isLoading ?(
+          <Skeleton/>
+        ) : (
+          <h2>{courseElement.Title}</h2>
+        )
+      }
     </div>
   );
 }
