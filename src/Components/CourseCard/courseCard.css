@@ -31,7 +31,7 @@
   .card button {
     position: absolute;
     left: 50%;
-    bottom: 250px;
+    bottom: 200px;
     transform: translateX(-50%);
     padding: 10px 20px;
     background-color: #0070C0;
