@@ -44,7 +44,7 @@ const CourseCard = ({ id }) => {
         isLoading ?(
           <Skeleton variant="rectangular" width={'100%'} height={'auto'} />
         ) : (
-          <img src={API_URL + courseElement.courseImage.data.attributes.formats.medium.url} alt="img" />
+          <img src={API_URL + courseElement.courseImage.data.attributes.formats.thumbnail.url} alt={API_URL + courseElement.courseImage.data.attributes.alternativeText} />
         )
       }
       <button id={`seeMoreBtn-${id}`}>See more</button>

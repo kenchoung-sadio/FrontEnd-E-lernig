@@ -1,0 +1,122 @@
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-right: 50px;
+    width: 550px;
+    height: 500px;
+    border-radius: 40px;
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+}
+
+.auth-form h2{
+    color: #004A80;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.auth-form h2 span {
+    color: #1C8FF0;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.header-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.header-form h1{
+    color: #004A80;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header-form p{
+    color: #CCCCCC;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: end;
+}
+
+.header-form p span{
+    color: #1C8FF0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.content-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-form .input{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-form .input label{
+    color: #004A80;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.content-form .input input{
+    border-radius: 10px;
+    border: 3px solid #004A80;
+    background: #FFFFFF;
+    color: #004A80;
+    font-size: 18px;
+    height: 40px;
+    caret-color: #004A80;
+}
+
+.input .btn_submit_auth{
+    cursor: pointer;
+}
+
+.btn_submit_auth{
+    border-radius: 7px;
+    padding: 10px;
+    border-style: none;
+    font-size: 15px;
+    background-color: #1C8FF0;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.btn_submit_google_auth {
+    display: flex; /* Utilisez Flexbox pour aligner les éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    border-radius: 7px;
+    padding: 10px;
+    border-style: none;
+    font-size: 15px;
+    color: #004A80;
+    background: rgba(233, 241, 255, 0.80);
+    box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.30);
+    cursor: pointer;
+  }
+  
+  .ic_google {
+    margin-right: 10px; /* Ajoute un espace entre l'icône et le texte */
+  }
+  
