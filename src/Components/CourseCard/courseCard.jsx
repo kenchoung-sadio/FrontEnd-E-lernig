@@ -3,6 +3,7 @@ import './courseCard.css'
 import { getCourse } from '../../Services/Courses/getCourse';
 import { Skeleton } from '@mui/material';
 import { API_URL } from '../../Services/API';
+import ic_error from '../../Assets/ic_error.png'
 
 const CourseCard = ({ id }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -44,7 +45,7 @@ const CourseCard = ({ id }) => {
         isLoading ?(
           <Skeleton variant="rectangular" width={'100%'} height={'auto'} />
         ) : (
-          <img src={API_URL + courseElement.courseImage.data.attributes.formats.thumbnail.url} alt={API_URL + courseElement.courseImage.data.attributes.alternativeText} />
+          <img src={API_URL + courseElement.courseImage.data.attributes.formats.thumbnail.url ? API_URL + courseElement.courseImage.data.attributes.formats.thumbnail.url : ic_error} alt={API_URL + courseElement.courseImage.data.attributes.alternativeText} />
         )
       }
       <button id={`seeMoreBtn-${id}`}>See more</button>
