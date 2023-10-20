@@ -1,0 +1,16 @@
+.list-card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.courses-element{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.container-btn-more-courses{
+    display: flex;
+    justify-content: center;
+}

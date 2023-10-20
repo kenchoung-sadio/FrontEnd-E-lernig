@@ -1,0 +1,14 @@
+.question-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px;
+}
+
+.text-question-section{
+    width: auto;
+    padding: 30px;
+}
+
+.text-question-section p {
+    color: #ffffff;
+}

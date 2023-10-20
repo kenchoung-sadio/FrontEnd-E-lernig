@@ -1,0 +1,64 @@
+.form-question{
+    width: 300px;
+    height: auto;
+    padding: 30px;
+    border-radius: 50px;
+    background: #004A80;
+    box-shadow: 5.25px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+}
+
+.input input{
+    width: 100%;
+    background-color: #004A80;
+    border-style: solid;
+    border-color: #ffffff;
+    font-size: 15px;
+    padding: 5px;
+    caret-color: #ffffff;
+    color: #ffffff;
+}
+
+.input input::placeholder{
+    color: #efefef;
+}
+
+.input textarea{
+    width: 100%;
+    background-color: #004A80;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    font-size: 15px;
+    font-family: 'Poppins';
+    padding: 5px;
+    caret-color: #ffffff;
+    color: #ffffff;
+}
+
+.input textarea::placeholder{
+    color: #efefef;
+}
+
+.btn_send{
+    padding: 6px;
+    background-color: #0070C0;
+    border-style: none;
+    border-radius: 20px;
+    color: #ffffff;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.btn_send:hover{
+    background-color: #CCCCCC;
+    color: #0070C0;
+    transition: all 0.5s ease-out;
+}
+
