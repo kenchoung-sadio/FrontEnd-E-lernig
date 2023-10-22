@@ -18,7 +18,22 @@ const SignInPage = () => {
             ever since the 1500s,
           </p>
         </section>
-        <AuthForm />
+        <AuthForm
+          auth_type={'Sign in'}
+          input_contain={
+          <>
+          <br /><br />
+            <div className='input'>
+                    <label htmlFor="email-name">Enter your username or email address</label>
+                    <input type="text" name="email-name" id="email-name" placeholder='Username or email adress' />
+                </div>
+                <div className='input'>
+                    <label htmlFor="password">Enter your password</label>
+                    <input type="password" name="password" id="password" placeholder='Password' />
+                </div>
+          </>
+          }
+         />
       </div>
 
       <div className='image-container'>

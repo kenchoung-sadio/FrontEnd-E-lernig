@@ -7,9 +7,9 @@ export const Navbar = () => {
         <nav>
             <Link className='span'>E.LEARNIA</Link>
             <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Courses</li>
+                <li><Link to='/login' style={{textDecoration: 'none', color: '#FFFFFF'}} >Home</Link></li>
+                <li><Link to='/login' style={{textDecoration: 'none', color: '#FFFFFF'}} >About Us</Link></li>
+                <li><Link to='/login' style={{textDecoration: 'none', color: '#FFFFFF'}} >Courses</Link></li>
                 <li>
                     <button className='btnLogin'><Link to='/login' style={{textDecoration: 'none', color: '#FFFFFF'}}>Sign in</Link></button>
                 </li>
