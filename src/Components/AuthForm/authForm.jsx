@@ -1,32 +1,28 @@
 import React from 'react';
 import './authForm.css'
 import {FcGoogle} from 'react-icons/fc'
+import { Link } from 'react-router-dom';
 
-const AuthForm = () => {
+const AuthForm = ({auth_type, input_contain, handler_submit}) => {
     return (
-        <form className='auth-form'>
+        <form className='auth-form' onSubmit={handler_submit}>
             <h2>Welcome to <span>E.LEARNIA</span></h2>
             <div className='header-form'>
-                <h1>Sign in</h1>
-                <p>No account? <br /> <span>sign up</span></p>
+                <h1>{auth_type}</h1>
+                <p>{auth_type === 'Sign in' ? (<>No account? <br /> <Link className='span' to={'/signup'}>sign up</Link></>) : (<>Have account? <br /> <Link className='span' to={'/login'}>sign in</Link></>)}</p>
             </div>
             <div className="content-form">
-                <div className='input'>
-                    <label htmlFor="email-name">Enter your username or email address</label>
-                    <input type="text" name="email-name" id="email-name" placeholder='Username or email adress' />
-                </div>
-                <div className='input'>
-                    <label htmlFor="password">Enter your password</label>
-                    <input type="password" name="password" id="password" placeholder='Password' />
-                </div>
+                {input_contain}
                 <br />
                 <div className='input'>
-                    <button className='btn_submit_auth'>Sign in</button>
+                    <button className='btn_submit_auth'>{auth_type}</button>
                 </div>
                 <div className="input">
-                    <button className='btn_submit_google_auth'>
+                    <button 
+                        className='btn_submit_google_auth'
+                        >
                         <FcGoogle size={20} className='ic_google'/>
-                        Sign in with Google
+                        {auth_type} with Google
                     </button>
                 </div>
             </div>

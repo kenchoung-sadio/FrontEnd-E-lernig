@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import LandingPage from './Pages/LandingPage/landing';
 import SignInPage from './Pages/SignInPage/signIn';
-import CoursesPage from './Pages/CoursesPage/courses';
+import SignUpPage from './Pages/SignUpPage/signUp';
+import Main from './Pages/Main/main';
 
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
     <div>
      {/* <Navbar />*/}
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/*" element={<Main />} />
           <Route path="/login" element={<SignInPage />} />
-          <Route path="/list-courses" element={<CoursesPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Routes>
       {/*<Footer />*/}
     </div>

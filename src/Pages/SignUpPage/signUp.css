@@ -1,0 +1,27 @@
+.input-sign-up{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-sign-up input{
+    border-radius: 10px;
+    border: 3px solid #004A80;
+    background: #FFFFFF;
+    color: #004A80;
+    font-size: 18px;
+    caret-color: #004A80;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.input-sign-up input::placeholder{
+    font-size: 18px;
+}
+
+.input-sign-up label{
+    color: #004A80;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 15px;
+}

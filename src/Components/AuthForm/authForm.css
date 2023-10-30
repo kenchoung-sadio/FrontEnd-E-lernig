@@ -32,6 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    height: 80px;
 }
 
 .header-form h1{
@@ -51,7 +52,7 @@
     justify-content: end;
 }
 
-.header-form p span{
+.header-form p .span{
     color: #1C8FF0;
     font-style: normal;
     font-weight: 400;
@@ -59,6 +60,7 @@
     position: relative;
     bottom: 0;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .content-form {

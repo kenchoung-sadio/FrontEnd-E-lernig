@@ -5,6 +5,12 @@ import img_login_section from './../../Assets/img_login_page_section.png'
 import { Link } from 'react-router-dom';
 
 const SignInPage = () => {
+
+  const handler_submit = (e) => {
+    e.preventDefault()
+    console.log('click!')
+  }
+
     return (
         <section className='login-page'>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -18,7 +24,23 @@ const SignInPage = () => {
             ever since the 1500s,
           </p>
         </section>
-        <AuthForm />
+        <AuthForm
+          auth_type={'Sign in'}
+          input_contain={
+          <>
+          <br /><br />
+            <div className='input'>
+                    <label htmlFor="email-name">Enter your username or email address</label>
+                    <input type="text" name="email-name" id="email-name" placeholder='Username or email adress' />
+                </div>
+                <div className='input'>
+                    <label htmlFor="password">Enter your password</label>
+                    <input type="password" name="password" id="password" placeholder='Password' />
+                </div>
+          </>
+          }
+          handler_submit={handler_submit}
+         />
       </div>
 
       <div className='image-container'>
