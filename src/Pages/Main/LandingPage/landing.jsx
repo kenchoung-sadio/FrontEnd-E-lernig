@@ -1,10 +1,10 @@
 import React from 'react';
-import landing_img from '../../Assets/landing_img.png'
+import landing_img from '../../../Assets/landing_img.png'
 import './Landing.css'
 import { Divider } from '@mui/material';
-import Courses from '../../Components/Courses/courses';
-import InformationSection from '../../Components/InformationSection/informationSection';
-import QuestionSection from '../../Components/QuestionSection/questionSection';
+import Courses from '../../../Components/Courses/courses';
+import InformationSection from '../../../Components/InformationSection/informationSection';
+import QuestionSection from '../../../Components/QuestionSection/questionSection';
 
 const LandingPage = () => {
     return (

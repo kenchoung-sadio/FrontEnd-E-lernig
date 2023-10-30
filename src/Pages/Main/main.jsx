@@ -1,9 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import LandingPage from '../LandingPage/landing';
 import { Navbar } from '../../Components/Navbar/navbar';
 import Footer from '../../Components/Footer/footer';
-import CoursesPage from './CoursesPage/courses';
+import LandingPage from './LandingPage/landing';
 
 const Main = () => {
     return (
@@ -11,7 +10,6 @@ const Main = () => {
             <Navbar />
             <Routes>
                 <Route path='/' element={<LandingPage />} />
-                <Route path='/list-courses' element={<CoursesPage />} />
             </Routes>
             <Footer />
         </>
