@@ -5,6 +5,12 @@ import img_login_section from './../../Assets/img_login_page_section.png'
 import { Link } from 'react-router-dom';
 
 const SignInPage = () => {
+
+  const handler_submit = (e) => {
+    e.preventDefault()
+    console.log('click!')
+  }
+
     return (
         <section className='login-page'>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -33,6 +39,7 @@ const SignInPage = () => {
                 </div>
           </>
           }
+          handler_submit={handler_submit}
          />
       </div>
 

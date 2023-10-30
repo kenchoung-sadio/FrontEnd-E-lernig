@@ -1,10 +1,19 @@
 import React from 'react';
 import AuthForm from '../../Components/AuthForm/authForm';
 import img_login_section from './../../Assets/img_login_page_section.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './signUp.css'
 
 const SignUpPage = () => {
+
+  const navigate = useNavigate()
+
+    const handler_submit = (e) => {
+      e.preventDefault()
+      console.log('click!')
+      navigate('/login')
+    }
+
     return (
         <section className='login-page'>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -40,6 +49,7 @@ const SignUpPage = () => {
                 </div>
           </>
           }
+          handler_submit={handler_submit}
          />
       </div>
 

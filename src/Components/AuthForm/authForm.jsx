@@ -3,9 +3,9 @@ import './authForm.css'
 import {FcGoogle} from 'react-icons/fc'
 import { Link } from 'react-router-dom';
 
-const AuthForm = ({auth_type, input_contain}) => {
+const AuthForm = ({auth_type, input_contain, handler_submit}) => {
     return (
-        <form className='auth-form'>
+        <form className='auth-form' onSubmit={handler_submit}>
             <h2>Welcome to <span>E.LEARNIA</span></h2>
             <div className='header-form'>
                 <h1>{auth_type}</h1>
@@ -18,7 +18,9 @@ const AuthForm = ({auth_type, input_contain}) => {
                     <button className='btn_submit_auth'>{auth_type}</button>
                 </div>
                 <div className="input">
-                    <button className='btn_submit_google_auth'>
+                    <button 
+                        className='btn_submit_google_auth'
+                        >
                         <FcGoogle size={20} className='ic_google'/>
                         {auth_type} with Google
                     </button>
